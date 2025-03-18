@@ -1,1 +1,3 @@
+# Get to know how is the weather in Hong Kong
+
 In this analysis, I want to know more about the weather and seasons of Hong Kong, my new resident city. I will compare to Paris and Seoul (my resident cities for last 15 years(!)) using public data. Which districts of Hong Kong will resemble the most to my previous residencies? (Shall I move to that district to transcend my deepest nostalgia?) How the temperature and sunshine will vary in upcoming months nearby my new apartment? (Since my mom is visiting Hong Kong soon and I don't want to overcook her with the extreme humid heat...)
