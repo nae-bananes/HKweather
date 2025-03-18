@@ -2,8 +2,8 @@
 
 In this analysis, I want to know more about the weather and seasons of Hong Kong, my new resident city. I will compare to Paris and Seoul (my resident cities for last 15 years(!)) using public data. Which districts of Hong Kong will resemble the most to my previous residencies? (Shall I move to that district to transcend my deepest nostalgia?) How the temperature and sunshine will vary in upcoming months nearby my new apartment? (Since my mom is visiting Hong Kong soon and I don't want to overcook her with the extreme humid heat...)
 
-# 1. Data Sources overview
-## 1. Hong Kong weather Data
+# 1. Overview of data sources
+## a. Hong Kong weather Data
 I used three following datasets available on HK Data Gov web page. 
 - Daily maximum temperature data (https://data.gov.hk/en-data/dataset/hk-hko-rss-daily-temperature-info-hko)
 - Daily mean humidity data (https://data.gov.hk/en-data/dataset/hk-hko-rss-daily-mean-relative-humidity)
