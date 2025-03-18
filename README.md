@@ -4,5 +4,7 @@ In this analysis, I want to know more about the weather and seasons of Hong Kong
 
 # Data Sources
 ## 1. Hong Kong weather Data
-I used 'Maximum, minimum, average temperature data' available on HK Data Gov web page.
+I used 'Maximum, minimum, average temperature data' available on HK Data Gov web page. I had to download .csv file by district and aggregate 38 files since there's no aggregated file.
+
 https://data.gov.hk/en-data/dataset/hk-hko-rss-daily-temperature-info-hko
+
