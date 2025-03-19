@@ -13,7 +13,7 @@ For each dataset, I had to download one .csv file by district (weather observato
 
 Without access to the definition of these flags, I have used all numerical values including the ones flagged to '#' in Data Completeness column if it contains a normal numerical value other than '\*\*\*'. 
 
-As of Temperature dataset, the percentage of observations filled with '\*\*\*' takes less than 1% for 72% of 38 Hong Kong districts. It is 5.5% at maximum, for Ngong Ping district observatory (NGP).
+As of Temperature dataset, the percentage of observations filled with '\*\*\*' takes less than 1% for 71% of 38 Hong Kong districts. It is 5.5% at maximum, for Ngong Ping district observatory (NGP).
 
 
 
