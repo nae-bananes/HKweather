@@ -333,20 +333,23 @@ class STL(BaseDecomposition):
 
     def _extract_seasonality(self, detrended, **seasonality_kwargs):
         """Extracts Seasonality from detrended data using averages"""
-        if detrended.shape[0] < 2 * self.seasonality_period:
-            raise ValueError(
-                f"time series must have 2 complete cycles requires {2 * self.seasonality_period} "
-                f"observations. time series only has {detrended.shape[0]} observation(s)"
-            )
+          
+        #if detrended.shape[0] < 2 * self.seasonality_period:
+        #    raise ValueError(
+        #        f"time series must have 2 complete cycles requires {2 * self.seasonality_period} "
+        #        f"observations. time series only has {detrended.shape[0]} observation(s)"
+        #    )
         # period must not be larger than size of series to avoid introducing NaNs
-        if self.seasonality_period > len(detrended):
-            warnings.warn(
-                "`period` should not be less than length of series. Setting period to length of series"
-            )
-            period = len(detrended)
-        else:
-            period = self.seasonality_period
+        #if self.seasonality_period > len(detrended):
+        #    warnings.warn(
+        #        "`period` should not be less than length of series. Setting period to length of series"
+        #    )
+        #    period = len(detrended)
+        #else:
+        #    period = self.seasonality_period
         # calc one-period seasonality, remove tiled array from detrended
+        if self.seasonality_period=="month":
+            period = 12
         period_averages = np.array(
             [pd_nanmean(detrended[i::period]) for i in range(period)]
         )
