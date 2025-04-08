@@ -353,11 +353,13 @@ class STL(BaseDecomposition):
         period_averages = np.array(
             [pd_nanmean(detrended[i::period]) for i in range(period)]
         )
+        
         # 0-center the period avgs
         if self.model == "additive":
             period_averages -= np.mean(period_averages)
         else:
             period_averages /= np.mean(period_averages)
+
         # Saving period_averages in the object
         self.period_averages = period_averages
         seasonal = np.tile(period_averages, len(detrended) // period + 1)[
