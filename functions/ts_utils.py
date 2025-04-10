@@ -274,6 +274,7 @@ def mase(actuals, predictions, insample):
     
     # Shift the insample data to create a simple naive forecast
     naive_forecast = np.roll(insample, 1)
+    
     # Assuming the first element is not a valid forecast
     naive_forecast[0] = np.nan 
     
