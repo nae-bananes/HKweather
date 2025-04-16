@@ -14,19 +14,19 @@ def evaluate_performance(ts_train, ts_test, models, metrics,
     SeasonalWindowAverage,
     RandomWalkWithDrift,
     HoltWinters,
-    #ETS,
+    ETS,
     AutoETS,
     AutoARIMA,
-    ARIMA,
+    #ARIMA,
     AutoTheta,
     DynamicTheta,
     DynamicOptimizedTheta,
     Theta,
     OptimizedTheta,
-    TBATS,
-    AutoTBATS,
+    #TBATS,
+    #AutoTBATS,
     MSTL
-)
+    )
 
     if metric_df is None:
         metric_df = pd.DataFrame()  # Initialize an empty DataFrame if not provided
@@ -70,10 +70,13 @@ def evaluate_performance(ts_train, ts_test, models, metrics,
         results = results.merge(y_pred, how='left', on=[id_col, time_col])
 
         ids = ts_train[id_col].unique()
+
         # Calculate metrics
         for id in ids:
+
             temp_results = results[results[id_col] == id]
             temp_train = ts_train[ts_train[id_col] == id]
+
             for metric in metrics:
                 metric_name = metric.__name__
                 if metric_name == 'mase':
@@ -89,5 +92,6 @@ def evaluate_performance(ts_train, ts_test, models, metrics,
             temp_df = pd.DataFrame(evaluation, index=[0])
             temp_df['Model'] = model_name
             metric_df = pd.concat([metric_df, temp_df], ignore_index=True)
+
 
     return results, metric_df
